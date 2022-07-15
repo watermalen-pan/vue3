@@ -1,16 +1,15 @@
 <template>
   <div class="content">
-    <Dialog>
-      <template v-slot="{ data, index }">
-        <div>{{ data.age }}---{{ index }}</div>
-      </template>
-    </Dialog>
+    <A></A>
+    <B></B>
+    <C></C>
   </div>
 </template>
 
 <script setup lang="ts">
-import Dialog from "@/components/Dialog/index.vue";
-// import { reactive, markRaw } from "vue";
+import A from "./A.vue";
+import B from "./B.vue";
+import C from "./C.vue";
 </script>
 
 <style lang="less" scoped>

@@ -1,12 +1,12 @@
 <template>
   <div class="dialog">
-    <div class="header"></div>
-    <div class="main">
+    <head class="header"></head>
+    <main class="main">
       <div v-for="(item, index) in data" :key="index">
         <slot :data="item" :index="index"></slot>
       </div>
-    </div>
-    <div class="footer"></div>
+    </main>
+    <footer class="footer"></footer>
   </div>
 </template>
 
