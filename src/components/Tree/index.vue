@@ -26,11 +26,11 @@ type TreeList = {
     children?: TreeList[] | [];
 };
 
-type Prop = {
+type Props = {
     data?: TreeList[];
 };
 
-defineProps<Prop>();
+defineProps<Props>();
 
 const isShowChildren = (item: TreeList) => {
     if (!item.children || item.children.length === 0) return false;
