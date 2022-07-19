@@ -1,12 +1,8 @@
 <template>
   <div class="dialog">
-    <head class="header"></head>
-    <main class="main">
-      <div v-for="(item, index) in data" :key="index">
-        <slot :data="item" :index="index"></slot>
-      </div>
-    </main>
-    <footer class="footer"></footer>
+    <header class="header">header</header>
+    <main class="main">main</main>
+    <footer class="footer">footer</footer>
   </div>
 </template>
 
@@ -18,35 +14,23 @@ export default {
 
 <script setup lang="ts">
 import { reactive } from "vue";
-type names = {
-  name: string;
-  age: number;
-};
-const data = reactive<names[]>([
-  { name: "丫丫丫", age: 200 },
-  { name: "丫丫丫", age: 210 },
-  { name: "丫丫丫", age: 220 },
-  { name: "丫丫丫", age: 230 },
-  { name: "丫丫丫", age: 240 },
-]);
 </script>
 
 <style lang="less" scoped>
 .dialog {
+  width: 200px;
+  color: #fff;
   .header {
-    height: 200px;
+    height: 100px;
     background-color: red;
-    color: #fff;
   }
   .main {
-    height: 300px;
+    height: 100px;
     background-color: green;
-    color: #fff;
   }
   .footer {
-    height: 200px;
+    height: 100px;
     background-color: blue;
-    color: #fff;
   }
 }
 </style>
